@@ -3,16 +3,21 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { AccueilComponent } from './page/accueil/accueil.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { FooterComponent } from './footer/footer.component';
+import { FilmComponent } from './film/film.component';
+import { SerieComponent } from './serie/serie.component';
+import { HomeComponent } from './home/home.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    AccueilComponent,
     NavBarComponent,
-    FooterComponent
+    FooterComponent,
+    FilmComponent,
+    SerieComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
