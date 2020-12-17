@@ -8,6 +8,10 @@ import { FooterComponent } from './footer/footer.component';
 import { FilmComponent } from './film/film.component';
 import { SerieComponent } from './serie/serie.component';
 import { HomeComponent } from './home/home.component';
+import { FilmDetailComponent } from './film/detail/film-detail/film-detail.component';
+import { SerieDetailComponent } from './serie/detail/serie-detail/serie-detail.component';
+import { ListeFilmComponent } from './home/liste-film/liste-film.component';
+import { ListeSerieComponent } from './home/liste-serie/liste-serie.component';
 
 
 @NgModule({
@@ -17,7 +21,11 @@ import { HomeComponent } from './home/home.component';
     FooterComponent,
     FilmComponent,
     SerieComponent,
-    HomeComponent
+    HomeComponent,
+    FilmDetailComponent,
+    SerieDetailComponent,
+    ListeFilmComponent,
+    ListeSerieComponent
   ],
   imports: [
     BrowserModule,
