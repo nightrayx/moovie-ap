@@ -1,8 +1,8 @@
-<div class="jumbotron">
-  <div class="row justify-content-center"><img src="" class="img-fluid" alt=""/></div>
+<div class="jumbotron bg-dark">
+  <div class="row justify-content-center"><img src="https://image.tmdb.org/t/p/w500{{serieDetails.backdrop_path}}" class="img-fluid" alt=""/></div>
   <div class="row col-10 offset-1 mt-4">
-      <h1 class="display-4"></h1>
-      <p class="lead"></p>
-      <a class="btn btn-dark" [routerLink]="['/series']">Retour à l'accueil</a>
+      <h1 class="display-4 text-white">{{serieDetails.name}}</h1>
+      <p class="lead text-white">{{serieDetails.overview}}</p>
+      <a class="btn btn-secondary" [routerLink]="['/series']">Retour à la liste des series</a>
   </div>
 </div>

@@ -1,4 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { tap, map } from 'rxjs/operators';
+import { Subscription } from 'rxjs';
+import { Film } from '../../../models/film';
+import { MoviedbService } from '../../../services/moviedb.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-film-detail',
@@ -7,9 +12,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FilmDetailComponent implements OnInit {
 
-  constructor() { }
+  id!: number;
+  filmDetails: Film[] = [];
+  subscription: Subscription = new Subscription();
 
-  ngOnInit(): void {
+  constructor(private moviedbService: MoviedbService, private route: ActivatedRoute) {
+    this.route.params.subscribe(params => this.id = params.id);
   }
 
+  ngOnInit(): void {
+    this.filmDetails = this.moviedbService.getFilmById(this.id)
+      .subscribe(data => {
+        this.filmDetails = data;
+        console.log(data);
+        console.log(this.id);
+      })
+  }
+
+  ngOnDestroy() {
+    this.subscription.unsubscribe()
+  }
 }

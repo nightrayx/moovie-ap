@@ -1,3 +1,4 @@
+import { Input } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -9,6 +10,9 @@ export class FilmComponent implements OnInit {
 
   constructor() { }
 
+  @Input() film: any;
+
   ngOnInit(): void {
+    console.log('film',this.film)
   }
 }

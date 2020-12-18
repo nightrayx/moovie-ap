@@ -1,4 +1,4 @@
-<div class="container-fluid">
+<!-- <div class="container-fluid">
   <div class="row">
     <div class="card col-md-3 m-2">
       <a [routerLink]="'/detailSerie'">
@@ -46,4 +46,16 @@
       </a>
     </div>
   </div>
-</div>
+</div> -->
+<a [routerLink]="['/detailSerie', serie.id]">
+  <div class="card mb-4">
+    <div class="card-img-overlay">
+      <h3 class="card-title">{{ serie.title }}</h3>
+    </div>
+    <img
+      src="https://image.tmdb.org/t/p/w200{{ serie.poster_path }}"
+      alt="Image de la serie"
+      class="card-img-top img-thumbnail"
+    />
+  </div>
+</a>
