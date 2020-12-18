@@ -1,0 +1,8 @@
+<div class="jumbotron bg-dark">
+  <div class="row justify-content-center"><img src="https://image.tmdb.org/t/p/w500{{filmDetails.backdrop_path}}" class="img-fluid" alt=""/></div>
+  <div class="row col-10 offset-1 mt-4">
+      <h1 class="display-4 text-white">{{filmDetails.title}}</h1>
+      <p class="lead text-white">{{filmDetails.overview}}</p>
+      <a class="btn btn-secondary" [routerLink]="['/films']">Retour à la liste des films</a>
+  </div>
+</div>
