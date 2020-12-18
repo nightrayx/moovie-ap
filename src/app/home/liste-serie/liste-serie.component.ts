@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MoviedbService } from '../../services/moviedb.service';
+import { Serie } from '../../models/serie';
 
 @Component({
   selector: 'app-liste-serie',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListeSerieComponent implements OnInit {
 
-  constructor() { }
-
-  ngOnInit(): void {
+  constructor(private moviedbService: MoviedbService) {
   }
 
+  series: Serie[] = [];
+
+  ngOnInit(): void {
+    // this.moviedbService.getSeries().subscribe(response => {
+    //   this.series = response;
+    // })
+  }
 }
